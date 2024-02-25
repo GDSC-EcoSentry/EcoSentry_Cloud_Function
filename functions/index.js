@@ -35,7 +35,7 @@ app.get("/update", async (req, res) => {
       return res.status(200).send("Node's ID does not exist!");
     }
     const node = {
-      date: (new Date()).toUTCString(),
+      date: new Date(),
       temperature: parseFloat(req.query.temperature)/100,
       humidity: parseFloat(req.query.humidity)/100,
       co: parseFloat(req.query.co),
